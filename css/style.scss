@@ -14,7 +14,7 @@
 // Base styles
 body {
   font-family: "Montserrat", Arial, sans-serif;
-  background: #18191d;
+  background: rgb(32, 32, 39);
   color: #fff;
 
 }
@@ -28,6 +28,9 @@ body {
 // Components
 @import '_header';
 @import '_animation';
+@import '_about';
+@import '_gamelist';
+@import '_footer';
 
 
 // Categories

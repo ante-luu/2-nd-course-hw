@@ -1,0 +1,270 @@
+@include respond-to(desktop){
+    .main{
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+    .about{
+        display: grid;
+        width: 100%;
+    }
+    .about__title{
+        color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-top: 95px;
+    margin-bottom: 24px;
+    }
+    .about__desc{
+        color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 71px;
+    }
+    .about__games{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 32px;
+        column-gap: 32px;
+        justify-content: space-between;
+    }
+    .about__game-card {
+        text-decoration: none;
+        z-index: 2;
+        
+        &:nth-child(1) { 
+            grid-row:1/ span 12;
+            grid-column: 1; 
+            
+           }
+        
+        &:nth-child(2) { 
+            grid-row: 1/span 13;
+            grid-column: 2;
+            
+        }
+        
+        &:nth-child(3) { 
+            grid-row:1/span 12;
+            grid-column: 3;
+           
+        }
+        
+        &:nth-child(4) { 
+            grid-row:13/span 14;
+            grid-column: 1;
+          
+        }
+        
+        &:nth-child(5) { 
+            grid-row:14/ span 13;
+            grid-column: 2;
+           
+        }
+        
+        &:nth-child(6) { 
+            grid-row: 13/span 14;
+            grid-column: 3;
+           
+        }
+    }
+    .about__game-card:hover {
+        transform: scale(1.07);
+        z-index: 2;
+        box-shadow: 0 8px 32px rgba(51,209,122,0.18);
+    }
+    .game-card {
+        background: #ffffff;
+        border-radius: 24px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .game-card__cover {
+        width: 100%;
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1 / 0.84;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .game-card__cover_type_guess-number { background-image: url('../img/game1.png'); }
+    .game-card__cover_type_arithmetic { background-image: url('../img/game2.png'); }
+    .game-card__cover_type_reverse-text { background-image: url('../img/game3.png'); }
+    .game-card__cover_type_rps { background-image: url('../img/game4.png'); }
+    .game-card__cover_type_quiz { background-image: url('../img/game5.png'); }
+    .game-card__cover_type_color-gen { background-image: url('../img/game6.png'); }
+    
+    
+    .game-card__number{
+        color: rgb(32, 32, 39);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 500;
+      
+        letter-spacing: 0px;
+        text-align: left;
+        text-decoration: none;
+    }
+    .game-card__title{
+        color: rgb(32, 32, 39);
+        font-family: Montserrat;
+        font-size: 32px;
+        font-weight: 700;
+       
+        letter-spacing: 0px;
+        text-align: left;
+        text-decoration: none;
+    }
+    .game-card__info {
+        padding: 35px 42px 39px 32px;
+        width: 100%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+     
+    
+    }
+    .game-card__number {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: 0px;
+        text-align: left;
+        margin-bottom: 26px;
+        margin-left: 16px;
+        color: rgb(32, 32, 39);
+    }
+
+
+
+}
+
+
+
+
+
+@include respond-to(mobile){
+    .about{
+        display: none;
+      }
+    .main{
+        padding: 0px 16px;
+      }
+      .game-list__title{
+        color: rgb(255, 255, 255);
+        font-family: Montserrat;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 49px;
+        letter-spacing: 0px;
+        text-align: left;
+        margin-top: 50px;
+      }
+
+
+      
+    .game-card {
+        background: #ffffff;
+        border-radius: 24px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .game-card__cover {
+        width: 100%;
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1 / 0.84;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .game-card__cover_type_guess-number { background-image: url('../img/game1.png'); }
+    .game-card__cover_type_arithmetic { background-image: url('../img/game2.png'); }
+    .game-card__cover_type_reverse-text { background-image: url('../img/game3.png'); }
+    .game-card__cover_type_rps { background-image: url('../img/game4.png'); }
+    .game-card__cover_type_quiz { background-image: url('../img/game5.png'); }
+    .game-card__cover_type_color-gen { background-image: url('../img/game6.png'); }
+    
+    
+    .game-card__number{
+        color: rgb(32, 32, 39);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 500;
+      
+        letter-spacing: 0px;
+        text-align: left;
+        text-decoration: none;
+    }
+    .game-card__title{
+        color: rgb(32, 32, 39);
+        font-family: Montserrat;
+        font-size: 32px;
+        font-weight: 700;
+       
+        letter-spacing: 0px;
+        text-align: left;
+        text-decoration: none;
+    }
+    .game-card__info {
+        padding: 35px 42px 39px 32px;
+        width: 100%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+     
+    
+    }
+    .game-card__number {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: 0px;
+        text-align: left;
+        margin-bottom: 26px;
+        margin-left: 16px;
+        color: rgb(32, 32, 39);
+    }
+    
+    .game-card__title {
+        color: rgb(32, 32, 39);
+        font-family: Montserrat;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 39px;
+        letter-spacing: 0px;
+        
+    }
+
+}
+
