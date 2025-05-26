@@ -45,3 +45,30 @@ text-align: center;
     }
     }
 
+
+
+
+    @include respond-to(tablet) {
+
+
+
+
+        .footer {
+            background: rgb(189, 237, 53);
+            padding: 61px 0 61px 0;
+            text-align: center;
+            border-top: 1px solid #23242a;
+        }
+        .footer__text {
+            /* Rectangle 111002148 */
+            color: rgb(0, 0, 0);
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        letter-spacing: 0px;
+        text-align: center;
+        }
+        }
+
+    
