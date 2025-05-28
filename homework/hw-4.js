@@ -91,4 +91,4 @@ for (let i = 1; i < numbers.length; i++) {
 }
 
 console.log('Массив чисел:', numbers);
-console.log('Минимальное число:', minNumber); 
+console.log('Минимальное число:', minNumber);
