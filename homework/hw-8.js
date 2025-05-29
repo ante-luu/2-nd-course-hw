@@ -1,5 +1,4 @@
 // Задание 1
-/*
 const people = [
    { name: 'Глеб', age: 29 },
    { name: 'Анна', age: 17 },
@@ -9,10 +8,8 @@ const people = [
 
 // Сортировка по возрасту
 console.log(people.sort((a, b) => a.age - b.age));
-*/
 
 // Задание 2
-/*
 function isPositive(number) {
     return number > 0;
 }
@@ -42,10 +39,8 @@ const people2 = [
 ];
 
 console.log(filter(people2, isMale));
-*/
 
 // Задание 3
-/*
 function printDateFor30Seconds() {
     const interval = setInterval(() => {
         console.log(new Date());
@@ -56,10 +51,8 @@ function printDateFor30Seconds() {
         console.log('30 секунд прошло');
     }, 30000);
 }
-*/
 
 // Задание 4
-/*
 function delayForSecond(callback) {
     setTimeout(callback, 1000);
 }
@@ -67,10 +60,8 @@ function delayForSecond(callback) {
 delayForSecond(function () {
    console.log('Привет, Глеб!');
 });
-*/
 
 // Задание 5
-/*
 function delayForSecond(cb) {
     setTimeout(() => {
         console.log('Прошла одна секунда');
@@ -83,5 +74,4 @@ function sayHi (name) {
 }
 
 // Исправленный код
-delayForSecond(() => sayHi('Глеб'));
-*/ 
+delayForSecond(() => sayHi('Глеб')); 
