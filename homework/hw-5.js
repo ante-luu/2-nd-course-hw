@@ -96,24 +96,26 @@ function cubeNumber() {
 // console.log(cubeNumber()); // Запустить в браузере и ввести нечисловое значение
 
 // Задание 7
+
+// Функции для расчета площади и периметра круга
+function getArea() {
+  return Math.PI * this.radius * this.radius;
+}
+
+function getPerimeter() {
+  return 2 * Math.PI * this.radius;
+}
+
 const circle1 = {
   radius: 10,
-  getArea: function() {
-    return Math.PI * this.radius * this.radius;
-  },
-  getPerimeter: function() {
-    return 2 * Math.PI * this.radius;
-  }
+  getArea: getArea, // Теперь ссылаемся на внешнюю функцию
+  getPerimeter: getPerimeter // Теперь ссылаемся на внешнюю функцию
 };
 
 const circle2 = {
   radius: 5,
-  getArea: function() {
-    return Math.PI * this.radius * this.radius;
-  },
-  getPerimeter: function() {
-    return 2 * Math.PI * this.radius;
-  }
+  getArea: getArea, // Повторное использование внешней функции
+  getPerimeter: getPerimeter // Повторное использование внешней функции
 };
 
 // Примеры использования 
