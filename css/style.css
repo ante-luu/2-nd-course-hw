@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Montserrat", Arial, sans-serif;
   background: rgb(32, 32, 39);
@@ -25,35 +26,28 @@ body {
     overflow: hidden;
     position: relative;
     z-index: 2;
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 2rem 1rem; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .header__back {
-    width: 100%;
-    background-position: 30% 50%;
-    background-size: 88%;
-    height: 100%;
-    padding-top: 196px;
     background-position: 430% 43%;
     background-repeat: no-repeat;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    overflow: hidden;
   }
   .header__container {
+    max-width: 1200px; /* Ограничение ширины контента */
+    margin: 0 auto; /* Центрирование */
     position: relative;
     z-index: 2;
-    overflow: hidden;
-    grid-column: 3/9;
-    grid-row: 1/12;
-    padding-bottom: 70px;
-    /* padding-right: 61px; */
-    max-width: 883px;
-    padding-left: 114px;
   }
   .header__content {
-    position: relative;
-    z-index: 2;
+    text-align: left;
+    max-width: 769px;
+    margin-top: 165px;
   }
   .header__title {
     color: rgb(32, 32, 39);
@@ -131,10 +125,6 @@ body {
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
     background: rgb(188, 236, 48);
-    padding-top: 27px;
-    padding-bottom: 27px;
-    grid-row: -2/-1;
-    grid-column: 1/13;
   }
   .marquee__inner {
     display: flex;
@@ -183,28 +173,32 @@ body {
     overflow: hidden;
     position: relative;
     z-index: 2;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0rem 0rem 0rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .header__back {
-    width: 100%;
-    background-position: 30% 50%;
-    background-size: 88%;
-    height: 100%;
-    padding-top: 148px;
     background-position: 430% 43%;
     background-repeat: no-repeat;
-    position: relative;
   }
   .header__container {
+    max-width: 1200px; /* Ограничение ширины контента */
+    margin: 0 auto; /* Центрирование */
     position: relative;
     z-index: 2;
-    overflow: hidden;
-    padding-bottom: 144px;
+    margin-top: 115px;
   }
   .header__content {
-    grid-column: 1/span 12;
     position: relative;
     z-index: 2;
     text-align: center;
+    padding-left: 2px;
+    padding-right: 1px;
+    margin: 0rem 2rem;
   }
   .header__title {
     color: rgb(32, 32, 39);
@@ -215,8 +209,6 @@ body {
     letter-spacing: 0px;
     text-align: center;
     z-index: 2;
-    margin-left: 38px;
-    margin-right: 28px;
   }
   .header__desc {
     color: rgb(32, 32, 39);
@@ -226,10 +218,8 @@ body {
     line-height: 20px;
     letter-spacing: 0px;
     text-align: center;
-    margin-top: 25px;
-    margin-bottom: 50px;
-    margin-left: 33px;
-    margin-right: 29px;
+    margin-top: 23px;
+    margin-bottom: 53px;
   }
   .header__desc-accent {
     font-weight: 600;
@@ -277,21 +267,25 @@ body {
   .marquee {
     overflow: hidden;
     width: 100%;
-    height: 51px;
+    height: 53px;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     box-sizing: border-box;
-    border: 0.54px solid rgba(255, 255, 255, 0.2);
-    -webkit-backdrop-filter: blur(26.86px);
-            backdrop-filter: blur(26.86px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
     background: rgb(188, 236, 48);
-    padding-top: 27px;
-    padding-bottom: 27px;
-    grid-row: -2/-1;
-    grid-column: 1/13;
   }
   .marquee__inner {
     display: none;
+  }
+  .marquee__inner--mobile span {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #202027;
+    margin: 0 27px;
   }
   .marquee__inner--mobile {
     display: flex;
@@ -299,29 +293,9 @@ body {
     white-space: nowrap;
     will-change: transform;
   }
-  .marquee__inner--mobile span {
-    color: rgb(32, 32, 39);
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 110%;
-    letter-spacing: 4%;
-    text-align: left;
-    text-transform: uppercase;
-    margin: 0 18px;
-  }
   .marquee__inner--mobile svg {
     margin: 0 18px;
     flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-  }
-  .marquee__inner svg {
-    margin: 0 18px;
-    flex-shrink: 0;
-  }
-  .marquee__icon {
-    size: 30%;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
