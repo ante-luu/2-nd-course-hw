@@ -1,7 +1,8 @@
 @include respond-to(desktop){
     .main{
-        padding-left: 120px;
-        padding-right: 120px;
+        padding-left: 115px;
+        padding-right: 110px;
+    
     }
     .about{
         display: grid;
@@ -271,8 +272,8 @@
 
 @include respond-to(tablet){
     .main{
-        padding-left: 120px;
-        padding-right: 120px;
+        padding-left: 115px;
+        padding-right: 110px;
     }
     .about{
         display: grid;

@@ -340,6 +340,8 @@ function startGuessNumberGame() {
         width: 90%;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         animation: modalAppear 0.3s ease-out;
+        max-height: 90vh; /* Limit height to enable scrolling */
+        overflow-y: auto; /* Enable vertical scrolling */
     `;
 
     // Добавляем стили для анимации
@@ -573,6 +575,8 @@ function startArithmeticGame() {
         width: 90%;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         animation: modalAppear 0.3s ease-out;
+        max-height: 90vh; /* Limit height to enable scrolling */
+        overflow-y: auto; /* Enable vertical scrolling */
     `;
 
     const title = document.createElement('h2');
@@ -912,6 +916,8 @@ function startReverseTextGame() {
         width: 90%;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         animation: modalAppear 0.3s ease-out;
+        max-height: 90vh; /* Limit height to enable scrolling */
+        overflow-y: auto; /* Enable vertical scrolling */
     `;
 
     const title = document.createElement('h2');
@@ -1069,7 +1075,7 @@ function startReverseTextGame() {
                 <div style="font-style: italic; color: #666; border-left: 3px solid #202027; padding-left: 15px; margin: 10px 0; font-size: 0.9em;">
                     "${randomMotivation}"
                 </div>
-            `; // Удалена цитата при неправильном ответе
+            `;
              message.style.background = '#f5f5f5';
         }
 
@@ -1215,7 +1221,7 @@ function startQuizGame() {
             },
             {
                 category: 'Кино',
-                question: 'Какую кличку дали Фрэнку Валлелонга, главному герою фильма «Зелёная книга»?',
+                question: 'Какую кличку дали Фрэнку Валлелонга, главному герою фильма «Звезда родилась»?',
                 options: ['Болтун', 'Молчун', 'Праведник'],
                 correct: 0
             },
@@ -1356,30 +1362,86 @@ function startQuizGame() {
                 correct: 2
             }
         ],
-        'Мультфильмы': [
+        'Советские мультфильмы': [
             {
                 category: 'Мультфильмы',
-                question: 'В каком году вышел первый мультфильм о Чебурашке?',
-                options: ['1969', '1971', '1973'],
-                correct: 0
+                question: 'Какая фамилия у Пятачка?',
+                options: ['Никакая — он просто Пятачок', 'Посторонним', 'Копытцев'],
+                correct: 1,
+                imageUrl: 'https://n1s1.hsmedia.ru/42/ed/59/42ed5964f4640af1fd842b73d56a189d/728x397_1_41cd548e2415486167eb20cddd88979a@950x517_0xmwhqu7gJ_7122391203748619770.jpg.webp',
+                fact: 'На табличке рядом с домом Пятачка есть табличка «Посторонним В.». В книге Пятачок объясняет, что так звали его дедушку — Вильям Посторонним'
             },
             {
                 category: 'Мультфильмы',
-                question: 'Кто озвучивал Волка в мультфильме "Ну, погоди!"?',
-                options: ['Анатолий Папанов', 'Клара Румянова', 'Георгий Вицин'],
-                correct: 0
+                question: 'Что сказал котенок Гав в ответ на предостережение: «Не ходи туда, там тебя ждут неприятности»?',
+                options: ['Они меня ждут, эти неприятности? Я пошел!', 'Ну как же туда не ходить! Они же ждут!', 'Спасибо за предупреждение, пойду в другое место'],
+                correct: 0,
+                imageUrl: 'https://n1s1.hsmedia.ru/70/62/61/70626124425234114d2c5358e997b677/728x410_1_83da3e8c1f0f47bb2142363b4030e739@1200x675_0xcYwVoIFP_8006547424762778340.jpg.webp',
+                fact: 'Первоначально Гав предполагался рыжим и беспородным, однако впоследствии мультипликатор Леонид Шварцман решил сделать котенка породистым, взяв за основу сиамскую породу.'
             },
             {
                 category: 'Мультфильмы',
-                question: 'Кто написал музыку к мультфильму "Бременские музыканты"?',
-                options: ['Геннадий Гладков', 'Максим Дунаевский', 'Алексей Рыбников'],
-                correct: 0
+                question: 'Какую песню насвистывает волк из «Ну, погоди!», поднимаясь по веревке?',
+                options: ['«Прекрасное далеко».', '«Трава у дома»', '«Если друг оказался вдруг...»'],
+                correct: 2,
+                imageUrl: 'https://n1s1.hsmedia.ru/e3/15/7c/e3157ce9d7e4d680cc0a9be3b1ea61c5/728x410_1_d5bb7b0ca1c985eba2f11d1ca326ef7b@1200x675_0xtz0YiyFq_6290696739632388350.jpg.webp',
+                fact: 'Волк насвистывает мелодию песни Высоцкого «Если друг оказался вдруг...». Такая отсылка не случайна — знаменитый музыкант должен был озвучивать персонажа, однако его не утвердили на роль цензоры из-за «тлетворного влияния Высоцкого на молодежь».'
             },
             {
                 category: 'Мультфильмы',
-                question: 'В каком году вышел первый мультфильм "Ну, погоди!"?',
-                options: ['1969', '1971', '1973'],
-                correct: 0
+                question: 'Сколько рук у Громозеки из «Тайны третьей планеты»?',
+                options: ['2', '6', '8'],
+                correct: 1,
+                imageUrl: 'https://n1s1.hsmedia.ru/46/1f/29/461f2908fb41abc304f4874204eb096d/728x410_1_5e87bedc6834d5e5df6719859f540843@1200x675_0xOIbmsDSf_9194718874850437291.jpg.webp',
+                fact: 'В мультфильме у Громозеки три пары рук. А вот в повести Кира Булычева у Громозеки «десять щупалец, восемь глаз, панцирь на груди и три добрых, бестолковых сердца».'
+            },
+            {
+                category: 'Мультфильмы',
+                question: 'Что подарил Медвежонок на день рождения Зайцу?',
+                options: ['Он забыл подарок', 'Волшебную страну', 'Букет ромашек'],
+                correct: 1,
+                imageUrl: 'https://n1s1.hsmedia.ru/1e/d3/68/1ed36861da5bbd4611ab0f1b2194f772/728x410_1_f6fa6da06e90fa435013c838af05c8ad@1200x675_0xCkbtTja0_9846746843867770470.jpg.webp',
+                fact: 'Медвежонок дарит Зайцу Тилимилитрямдию — волшебную страну, которую он придумывал всю ночь. А еще Мультфильм "Трям! Здравствуйте!" — это один из эпизодов запланированного мини-сериала, но из-за определенных причин авторы не смогли реализовать задуманное в полном объеме'
+            },
+            {
+                category: 'Мультфильмы',
+                question: 'Кто решает принять Маугли в стаю?',
+                options: ['Волчица Ракша', 'Питон Каа', 'Пантера Багира'],
+                correct: 2,
+                imageUrl: 'https://n1s1.hsmedia.ru/36/cf/4f/36cf4f88d115d1e27e8fc87fd3413012/728x410_1_5912d1a40289ef60fe11b03c38c617a0@1200x675_0x0xoW3dSt_9170795366975390852.jpg.webp',
+                fact: 'На совете стаи Багира спасает Маугли, предложив за его жизнь только что убитого быка.Кстати главный герой книги, Маугли, был вдохновлен сыном Редьярда Киплинга.А "Книга джунглей" стала первой книгой, которая была напечатана на бумаге, сделанной из конопли'
+            },
+            {
+                category: 'Мультфильмы',
+                question: 'За что выгнали пса из мультфильма «Жил-был пес»?',
+                options: ['Пес подружился с волком, которого боялись в селе', 'Пес проспал вора, который ограбил хозяев', 'Он сам ушел от хозяев'],
+                correct: 1,
+                imageUrl: 'https://n1s1.hsmedia.ru/b0/15/5b/b0155b08af6b3dbac2fdd03837994ccf/728x410_1_94416e2a8d64d3c9d3c3252e5fe62957@1200x675_0xqdwrMQBp_3081245034696875435.jpg.webp',
+                fact: 'Старый пес всё время спал и не проснулся даже во время кражи.Изначально, Эдуард Назаров планировал назвать свой мультфильм "Собачья жизнь". Но увидев такое название руководство рассердилось, так как чиновники усмотрели в нем какой-то скрытый смысл. Пришлось придумывать новое название для мультфильма, иначе его мультфильм так и не вышел бы на экраны.'
+            },
+            {
+                category: 'Мультфильмы',
+                question: 'Как попугай Кеша возвращается из деревни домой?',
+                options: ['Его привозит тракторист', 'Он голосует на дороге и ловит машину', 'Его присылают почтой'],
+                correct: 2,
+                imageUrl: 'https://n1s1.hsmedia.ru/47/ff/d0/47ffd03e193273485e11a95a92abfc76/728x410_1_f4002477d38e8b403999f6a6e279bf97@1200x675_0xCuo9oIGN_5132814729827389155.jpg.webp',
+                fact: 'Тракторист Василий высылает попугая обратно Вовке посылкой.Кстати, идея с мультфильмом зародилась совершенно случайно. Однажды на студии Валентин Караваев предложил Курляндскому снять простенький детский мультик и рассказал историю о попугае, которого он зимой видел улице. Пернатый улетел из дома, но не растерялся и затесался в стаю воробьев.Мультипликаторы стали додумывать историю: зачем он вылетел из квартиры? Почему не вернулся? Как ему жилось? Никто не ожидал, что попугай Кеша станет настолько популярным.'
+            },
+            {
+                category: 'Мультфильмы',
+                question: 'Что дарит бабушка Бонифацию на прощание?',
+                options: ['Свитер', 'Новый сачок', 'Красивую бабочку'],
+                correct: 0,
+                imageUrl: 'https://n1s1.hsmedia.ru/83/ef/f8/83eff8e49c71c6b5ba04b96979002787/728x410_1_2f5504e3dc8e7f2fb6374dcd5c10167c@1200x675_0xf4rD1V8z_2404920784099863466.jpg.webp',
+                fact: 'Бабушка дарит Бонифацию свитер, который вязала ему всё лето. Интересный факт: Сценарий, написанный Ф. Хитруком, концептуально изменил историю, рассказанную чешским писателем. Короткая, немного грустная сказка для детей младшего и среднего школьного возраста о цирковом льве, который пришел домой на каникулы и вместо того, чтобы без устали дарить идеи своим «маленьким, забавным племянникам», успешно превратился в довольно философскую историю о силе Доброта и Доброта Силы. в то же время сочетая мягкий юмор с лиризмом.'
+            },
+            {
+                category: 'Мультфильмы',
+                question: 'Как зовут почтальона Печкина?',
+                options: ['Сергей Петрович', 'Игорь Иванович', 'Юрий Борисович', 'Никак не зовут, он просто почтальон Печкин'],
+                correct: 1,
+                imageUrl: 'https://n1s1.hsmedia.ru/c1/a2/a9/c1a2a987ab02c6bff6dd0e9faf3b4b20/728x410_1_c06fa5185a3cb96049dbd37ccbfb310f@1200x675_0xjoeOcQnT_8622840712371264623.jpg.webp',
+                fact: 'Почтальона в Простоквашино зовут Печкин Игорь Иванович. Деревня Простоквашино существует на самом деле. Находится она в Нижегородской области и основана в 18 веке. Согласно поверью, местная хозяйка пролила удойник с молоком. Оно быстро прокисло на жаре, так и родилось название населённого пункта.'
             }
         ],
         'Искусство и литература': [
@@ -1443,7 +1505,7 @@ function startQuizGame() {
                 category: 'Сказки',
                 question: 'В какой сказке главный герой превращается в лебедя?',
                 options: ['Гадкий утенок', 'Дикие лебеди', 'Снежная королева'],
-                correct: 1
+                correct: 0
             },
             {
                 category: 'Сказки',
@@ -1460,7 +1522,7 @@ function startQuizGame() {
         ]
     };
 
-    // Add the facts for the Soviet Cinema quiz
+    // Add the facts for the Soviet Cinema quiz - Keeping existing facts array
     const sovietCinemaFacts = [
         'А еще «Человек-амфибия» Владимира Чеботарева и Геннадия Казанского был одним из любимых фильмов детства Квентина Тарантино. «Я даже не знал, что это русский фильм, но смотрел с большим удовольствием», — признавался режиссер.',
         '«Война и мир» Сергея Бондарчука до сих пор остается одним из самых дорогих фильмов в истории. Однако данные о бюджете картины разнятся. Так, критик Федор Раззаков считал, что стоимость съемок эпопеи составила 8 миллионов советских рублей — однако он не включил в расчет многие статьи расхода. А другие источники оценивают бюджет картины в целых 100 миллионов долларов США.',
@@ -1619,39 +1681,40 @@ function startQuizGame() {
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(32, 32, 39, 0.9);
+        background: rgba(0, 0, 0, 0.8);
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 1000;
-        backdrop-filter: blur(5px);
     `;
 
     const gameContent = document.createElement('div');
     gameContent.style.cssText = `
         background: white;
-        padding: 40px;
-        border-radius: 24px;
-        text-align: center;
+        padding: 30px;
+        border-radius: 15px;
         max-width: 800px;
         width: 90%;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        animation: modalAppear 0.3s ease-out;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
     `;
 
     const title = document.createElement('h2');
-    // Set the main title based on the quiz name
     if (randomQuizName === 'Советское кино') {
-        title.textContent = 'Викторина: Советская киноклассика'; // Correct title for Soviet Cinema
+        title.textContent = 'Викторина: Советская киноклассика';
+    } else if (randomQuizName === 'Советские мультфильмы') {
+        title.textContent = 'Викторина: Советские мультфильмы';
     } else {
         title.textContent = `Викторина: ${randomQuizName}`;
     }
     title.style.cssText = `
+        text-align: center;
+        margin-bottom: 20px;
         color: #202027;
         font-family: Montserrat;
-        font-size: 32px;
-        font-weight: 700;
-        margin-bottom: 30px;
+        font-size: 28px;
+        font-weight: 600;
     `;
 
     const progressContainer = document.createElement('div');
@@ -1660,44 +1723,41 @@ function startQuizGame() {
         height: 10px;
         background: #f0f0f0;
         border-radius: 5px;
-        margin: 20px 0;
-        overflow: hidden;
+        margin-bottom: 20px;
     `;
 
     const progressBar = document.createElement('div');
     progressBar.style.cssText = `
         width: 0%;
         height: 100%;
-        background: #33d17a;
+        background: #4CAF50;
+        border-radius: 5px;
         transition: width 0.3s ease;
     `;
-    progressContainer.appendChild(progressBar);
 
     const categoryDisplay = document.createElement('p');
     categoryDisplay.style.cssText = `
-        color: #33d17a;
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 10px;
         font-family: Montserrat;
-        font-size: 24px;
-        font-weight: 600;
-        margin: 10px 0;
     `;
 
     const questionDisplay = document.createElement('p');
     questionDisplay.style.cssText = `
+        font-size: 20px;
         color: #202027;
+        margin-bottom: 20px;
         font-family: Montserrat;
-        font-size: 24px;
-        font-weight: 600;
-        margin: 20px 0;
-        line-height: 1.4;
+        font-weight: 500;
     `;
 
     const optionsContainer = document.createElement('div');
     optionsContainer.style.cssText = `
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        margin: 30px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
     `;
 
     const message = document.createElement('p');
@@ -1711,8 +1771,8 @@ function startQuizGame() {
         padding: 20px;
         border-radius: 12px;
         background: #f8f8f8;
-        max-height: 200px; /* Add a max height */
-        overflow-y: auto; /* Add vertical scrolling */
+        max-height: 200px;
+        overflow-y: auto;
     `;
 
     const nextButton = document.createElement('button');
@@ -1727,20 +1787,25 @@ function startQuizGame() {
         font-family: Montserrat;
         font-size: 18px;
         font-weight: 600;
-        margin: 10px 0 30px 0;
+        margin: 10px auto;
         transition: all 0.3s;
         min-width: 200px;
         display: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     `;
 
     nextButton.addEventListener('mouseover', () => {
         nextButton.style.background = '#33d17a';
         nextButton.style.color = '#202027';
+        nextButton.style.transform = 'translateY(-2px)';
+        nextButton.style.boxShadow = '0 6px 15px rgba(0, 0, 0, 0.2)';
     });
 
     nextButton.addEventListener('mouseout', () => {
         nextButton.style.background = '#202027';
         nextButton.style.color = 'white';
+        nextButton.style.transform = 'translateY(0)';
+        nextButton.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.1)';
     });
 
     const closeButton = document.createElement('button');
@@ -1755,54 +1820,61 @@ function startQuizGame() {
         font-family: Montserrat;
         font-size: 18px;
         font-weight: 600;
-        margin: 0;
+        margin: 10px auto 0 auto; /* Добавил отступ снизу 0 и центрирование */
         transition: all 0.3s;
-        min-width: 200px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: block; /* Чтобы margin: auto работал для центрирования */
     `;
 
     closeButton.addEventListener('mouseover', () => {
         closeButton.style.background = '#33d17a';
         closeButton.style.color = '#202027';
+        closeButton.style.transform = 'translateY(-2px)';
+        closeButton.style.boxShadow = '0 6px 15px rgba(0, 0, 0, 0.2)';
     });
 
     closeButton.addEventListener('mouseout', () => {
         closeButton.style.background = '#202027';
         closeButton.style.color = 'white';
+        closeButton.style.transform = 'translateY(0)';
+        closeButton.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.1)';
     });
 
     function createOptionButton(text, index) {
         const button = document.createElement('button');
         button.textContent = text;
         button.style.cssText = `
-            background: #202027;
-            color: white;
-            border: none;
-            padding: 20px;
-            border-radius: 12px;
+            padding: 16px 24px;
+            border: 2px solid #202027;
+            border-radius: 60px;
+            background: white;
+            color: #202027;
             cursor: pointer;
+            font-size: 16px;
             font-family: Montserrat;
-            font-size: 18px;
-            font-weight: 500;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
             text-align: left;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         `;
 
         button.addEventListener('mouseover', () => {
             if (!button.disabled) {
                 button.style.background = '#33d17a';
                 button.style.color = '#202027';
-                button.style.transform = 'translateY(-2px)';
-                button.style.boxShadow = '0 6px 15px rgba(0, 0, 0, 0.2)';
+                 button.style.borderColor = '#33d17a';
+                 button.style.transform = 'translateY(-2px)';
+                 button.style.boxShadow = '0 6px 8px rgba(0, 0, 0, 0.2)';
             }
         });
 
         button.addEventListener('mouseout', () => {
             if (!button.disabled) {
-                button.style.background = '#202027';
-                button.style.color = 'white';
+                button.style.background = 'white';
+                button.style.color = '#202027';
+                button.style.borderColor = '#202027';
                 button.style.transform = 'translateY(0)';
-                button.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.1)';
+                button.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
             }
         });
 
@@ -1823,46 +1895,75 @@ function startQuizGame() {
 
             if (isCorrect) {
                 score++;
-                if (randomQuizName === 'Советское кино' && sovietCinemaFacts[currentQuestion]) {
-                    message.innerHTML = `
-                        <div style="margin-bottom: 15px; color: #33d17a;">
+                // Check if it's the Soviet Cinema or Soviet Cartoons category for special display
+                if (randomQuizName === 'Советские мультфильмы' && questions[currentQuestion].fact) {
+                     message.innerHTML = `
+                         <div style="margin-bottom: 15px; color: #33d17a;">
                             Правильно! Вот интересный факт:
-                        </div>
-                        <div style="font-style: italic; color: #666; border-left: 3px solid #33d17a; padding-left: 15px; margin: 10px 0; font-size: 0.9em;">
-                            "${sovietCinemaFacts[currentQuestion]}"
-                        </div>
-                    `;
-                    message.style.background = '#e8f5e9';
-                } else {
+                         </div>
+                         ${questions[currentQuestion].imageUrl ? `<img class="quiz-fact-image" src="${questions[currentQuestion].imageUrl}" alt="Изображение по теме вопроса" style="max-width: 100%; height: auto; margin-bottom: 10px; border-radius: 8px;">` : ''}
+                         <div style="font-style: italic; color: #666; border-left: 3px solid #33d17a; padding-left: 15px; margin: 10px 0; font-size: 0.9em;">
+                             "${questions[currentQuestion].fact}"
+                         </div>
+                     `;
+                     message.style.background = '#e8f5e9';
+                } else if (randomQuizName === 'Советское кино' && sovietCinemaFacts[currentQuestion]) {
+                     message.innerHTML = `
+                         <div style="margin-bottom: 15px; color: #33d17a;">
+                            Правильно! Вот интересный факт:
+                         </div>
+                         <div style="font-style: italic; color: #666; border-left: 3px solid #33d17a; padding-left: 15px; margin: 10px 0; font-size: 0.9em;">
+                             "${sovietCinemaFacts[currentQuestion]}"
+                         </div>
+                     `;
+                     message.style.background = '#e8f5e9';
+                }
+                else {
+                    // For other quizzes, show compliment and quote
                     const randomCompliment = categoryCompliments[category][Math.floor(Math.random() * categoryCompliments[category].length)];
+                    const randomQuote = gameMessages.quotes[Math.floor(Math.random() * gameMessages.quotes.length)];
                     message.innerHTML = `
                         <div style="margin-bottom: 15px; color: #33d17a;">
                             ${randomCompliment}
                         </div>
-                        ${getRandomQuote()}
+                        <div style="font-style: italic; color: #666; border-left: 3px solid #33d17a; padding-left: 15px; margin-top: 10px;">
+                            "${randomQuote.text}" - ${randomQuote.author} ${randomQuote.emoji}
+                        </div>
                     `;
                     message.style.background = '#e8f5e9';
                 }
             } else {
-                // Check if it's the Soviet Cinema category to display fact instead of motivation/quote
-                if (randomQuizName === 'Советское кино' && sovietCinemaFacts[currentQuestion]) {
+                // Incorrect answer logic
+                // Check if it's the Soviet Cinema or Soviet Cartoons category to display fact instead of motivation/quote
+                 if (randomQuizName === 'Советские мультфильмы' && questions[currentQuestion].fact) {
                     message.innerHTML = `
+                         <div style="margin-bottom: 15px; color: #202027;">
+                            Неправильно! Правильный ответ: ${questions[currentQuestion].options[questions[currentQuestion].correct]}
+                         </div>
+                         ${questions[currentQuestion].imageUrl ? `<img  class="quiz-fact-image" src="${questions[currentQuestion].imageUrl}" alt="Изображение по теме вопроса" style="max-width: 100%; height: auto; margin-bottom: 10px; border-radius: 8px;">` : ''}
+                         <div style="font-style: italic; color: #666; border-left: 3px solid #202027; padding-left: 15px; margin: 10px 0; font-size: 0.9em;">
+                            Вот интересный факт: "${questions[currentQuestion].fact}"
+                         </div>
+                    `;
+                    message.style.background = '#f5f5f5';
+                } else if (randomQuizName === 'Советское кино' && sovietCinemaFacts[currentQuestion]) {
+                     message.innerHTML = `
                          <div style="margin-bottom: 15px; color: #202027;">
                             Неправильно! Правильный ответ: ${questions[currentQuestion].options[questions[currentQuestion].correct]}
                          </div>
                          <div style="font-style: italic; color: #666; border-left: 3px solid #202027; padding-left: 15px; margin: 10px 0; font-size: 0.9em;">
                             Вот интересный факт: "${sovietCinemaFacts[currentQuestion]}"
                          </div>
-                    `;
-                    message.style.background = '#f5f5f5';
+                     `;
+                     message.style.background = '#f5f5f5';
                 } else {
-                    // For other quizzes or if fact is not available for Soviet Cinema, show incorrect message and a motivational phrase
+                    // For other quizzes or if fact/image is not available, show incorrect message and a motivational phrase
                     const randomMotivation = gameMessages.motivation[Math.floor(Math.random() * gameMessages.motivation.length)];
                     message.innerHTML = `
                         <div style="margin-bottom: 15px; color: #202027;">
                             Неправильно! Правильный ответ: ${questions[currentQuestion].options[questions[currentQuestion].correct]}
                         </div>
-                         <div style="font-style: italic; color: #666; border-left: 3px solid #202027; padding-left: 15px; margin-top: 10px;">
+                        <div style="font-style: italic; color: #666; border-left: 3px solid #202027; padding-left: 15px; margin-top: 10px;">
                             "${randomMotivation}"
                         </div>
                     `;
@@ -1884,7 +1985,10 @@ function startQuizGame() {
         if (randomQuizName === 'Советское кино') {
             // Introductory text for the Soviet Cinema quiz on all questions
             categoryDisplay.textContent = 'Угадайте фильм по зарубежной рецензии:'; // Changed introductory text and condition
-        } else {
+        } else if (randomQuizName === 'Советские мультфильмы') {
+             categoryDisplay.textContent = 'Викторина: Советские мультфильмы'; // Title for the new cartoon quiz
+        }
+        else {
              // For other quizzes, show the category name
              categoryDisplay.textContent = question.category;
         }
@@ -1892,6 +1996,7 @@ function startQuizGame() {
         // Always display the question number and text in questionDisplay
         questionDisplay.textContent = `Вопрос ${currentQuestion + 1} из ${questions.length}: ${question.question}`;
         message.textContent = ''; // Clear previous message
+        message.style.background = '#f8f8f8'; // Reset background for new question
 
         progressBar.style.width = `${((currentQuestion + 1) / questions.length) * 100}%`;
 
@@ -1982,6 +2087,8 @@ function startRockPaperScissorsGame() {
         width: 90%;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         animation: modalAppear 0.3s ease-out;
+        max-height: 90vh; /* Limit height to enable scrolling */
+        overflow-y: auto; /* Enable vertical scrolling */
     `;
 
     const title = document.createElement('h2');
@@ -1994,28 +2101,19 @@ function startRockPaperScissorsGame() {
     `;
 
     const statsContainer = document.createElement('div');
-    statsContainer.style.cssText = `
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 30px;
-        padding: 15px;
-        background: #f5f5f5;
-        border-radius: 12px;
-        font-family: 'Montserrat', sans-serif;
-    `;
+    statsContainer.classList.add('rps-stats-container');
 
     const createStatBox = (label, value) => {
         const box = document.createElement('div');
         box.style.cssText = `
             text-align: center;
             padding: 10px;
-            min-width: 100px;
         `;
         
         const labelEl = document.createElement('div');
         labelEl.textContent = label;
         labelEl.style.cssText = `
-            font-size: 16px;
+            font-size: ${window.innerWidth <= 768 ? '14px' : '16px'};
             color: #666;
             margin-bottom: 5px;
         `;
@@ -2023,7 +2121,7 @@ function startRockPaperScissorsGame() {
         const valueEl = document.createElement('div');
         valueEl.textContent = value;
         valueEl.style.cssText = `
-            font-size: 24px;
+            font-size: ${window.innerWidth <= 768 ? '18px' : '24px'};
             font-weight: bold;
             color: #202027;
         `;
@@ -2063,16 +2161,15 @@ function startRockPaperScissorsGame() {
     buttonsContainer.style.cssText = `
         display: flex;
         justify-content: center;
-        gap: 20px;
-        margin: 30px 0;
+        gap: ${window.innerWidth <= 768 ? '10px' : '20px'};
     `;
 
     choices.forEach(choice => {
         const button = document.createElement('button');
         button.textContent = `${emojis[choice]} ${choice}`;
         button.style.cssText = `
-            padding: 15px 30px;
-            font-size: 24px;
+            padding: ${window.innerWidth <= 768 ? '10px 10px' : '15px 30px'};
+            font-size: ${window.innerWidth <= 768 ? '18px' : '24px'};
             border: none;
             border-radius: 12px;
             background: #202027;
@@ -2241,6 +2338,8 @@ function startColorGeneratorGame() {
         width: 90%;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         animation: modalAppear 0.3s ease-out;
+        max-height: 90vh; /* Limit height to enable scrolling */
+        overflow-y: auto; /* Enable vertical scrolling */
     `;
 
     const title = document.createElement('h2');

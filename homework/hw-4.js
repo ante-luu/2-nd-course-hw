@@ -1,6 +1,7 @@
 // Задание 1: Вывод слова "Привет" дважды
-console.log('Привет');
-console.log('Привет');
+for (let i = 0; i < 2; i++) {
+    console.log('Привет');
+}
 
 // Задание 2: Вывод цифр от 1 до 5
 for (let i = 1; i <= 5; i++) {
@@ -90,4 +91,4 @@ for (let i = 1; i < numbers.length; i++) {
 }
 
 console.log('Массив чисел:', numbers);
-console.log('Минимальное число:', minNumber); 
+console.log('Минимальное число:', minNumber);
