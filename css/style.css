@@ -47,7 +47,9 @@ body {
     grid-column: 3/9;
     grid-row: 1/12;
     padding-bottom: 70px;
-    padding-right: 61px;
+    /* padding-right: 61px; */
+    max-width: 883px;
+    padding-left: 114px;
   }
   .header__content {
     position: relative;
