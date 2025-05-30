@@ -44,7 +44,7 @@ body {
     position: relative;
     z-index: 2;
     overflow: hidden;
-    grid-column: 1/9;
+    grid-column: 3/9;
     grid-row: 1/12;
     padding-bottom: 70px;
     padding-right: 61px;
@@ -52,7 +52,6 @@ body {
   .header__content {
     position: relative;
     z-index: 2;
-    margin-left: 120px;
   }
   .header__title {
     color: rgb(32, 32, 39);
