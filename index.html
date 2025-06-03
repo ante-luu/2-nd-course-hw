@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header center">
+        <div class="header__star"></div>
         <div class="header__back">
-            <div class="header__star"></div>
+            
             <div class="header__container">
                 <div class="header__content">
                     <h1 class="header__title">Добро пожаловать  на мой сайт мини-игр</h1>
@@ -21,7 +22,10 @@
                 </div>  
             </div>
             
-            <div class="marquee">
+
+            
+        </div>
+        <div class="marquee">
                 <div class="marquee__inner">
                     <span class="marquee__item">Викторина</span>
                     <svg class="marquee__icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 0L13.13 13.13L0 18L13.13 22.86L18 36L22.86 22.86L36 18L22.86 13.13L18 0Z" fill="#202027"/></svg>
@@ -86,58 +90,59 @@
 
                 </div>
             </div>
-        </div>
     </header>
     <main class="main">
         <section class="about" id="about">
-            <h2 class="about__title">Об играх</h2>
-            <p class="about__desc">В моей коллекции представлено 6 игр на разные темы.
-                <br>Игры несложные — в них может поиграть каждый.
-                <br>Все игры доступны для пользования.
-            </p>
-            <div class="about__games">
-                <a href="#guess-number" class="game-card about__game-card">
-                    <div class="game-card__cover game-card__cover_type_guess-number"></div>
-                    <div class="game-card__info " ">
-                        <span class="game-card__number">Игра № 1</span>
-                        <span class="game-card__title">Угадай число</span>
-                    </div>
-                </a>
-                <a href="#arithmetic" class="game-card about__game-card">
-                    <div class="game-card__cover game-card__cover_type_arithmetic"></div>
-                    <div class="game-card__info ">
-                        <span class="game-card__number">Игра № 2</span>
-                        <span class="game-card__title ">Простая арифметика</span>
-                    </div>
-                </a>
-                <a href="#reverse-text" class="game-card about__game-card">
-                    <div class="game-card__cover game-card__cover_type_reverse-text"></div>
-                    <div class="game-card__info ">
-                        <span class="game-card__number">Игра №3</span>
-                        <span class="game-card__title">Переверни текст</span>
-                    </div>
-                </a>
-                <a href="#rps" class="game-card about__game-card">
-                    <div class="game-card__cover game-card__cover_type_rps"></div>
-                    <div class="game-card__info ">
-                        <span class="game-card__number">Игра №4</span>
-                        <span class="game-card__title">Камень, ножницы, бумага</span>
-                    </div>
-                </a>
-                <a href="#quiz" class="game-card about__game-card">
-                    <div class="game-card__cover game-card__cover_type_quiz"></div>
-                    <div class="game-card__info">
-                        <span class="game-card__number">Игра №5</span>
-                        <span class="game-card__title">Простая викторина</span>
-                    </div>
-                </a>
-                <a href="#color-gen" class="game-card about__game-card">
-                    <div class="game-card__cover game-card__cover_type_color-gen"></div>
-                    <div class="game-card__info ">
-                        <span class="game-card__number">Игра №6</span>
-                        <span class="game-card__title">Генератор случайных цветов</span>
-                    </div>
-                </a>
+            <div class="container">
+                <h2 class="about__title">Об играх</h2>
+                <p class="about__desc">В моей коллекции представлено 6 игр на разные темы.
+                    <br>Игры несложные — в них может поиграть каждый.
+                    <br>Все игры доступны для пользования.
+                </p>
+                <div class="about__games">
+                    <a href="#guess-number" class="game-card about__game-card">
+                        <div class="game-card__cover game-card__cover_type_guess-number"></div>
+                        <div class="game-card__info " ">
+                            <span class="game-card__number">Игра № 1</span>
+                            <span class="game-card__title">Угадай число</span>
+                        </div>
+                    </a>
+                    <a href="#arithmetic" class="game-card about__game-card">
+                        <div class="game-card__cover game-card__cover_type_arithmetic"></div>
+                        <div class="game-card__info ">
+                            <span class="game-card__number">Игра № 2</span>
+                            <span class="game-card__title ">Простая арифметика</span>
+                        </div>
+                    </a>
+                    <a href="#reverse-text" class="game-card about__game-card">
+                        <div class="game-card__cover game-card__cover_type_reverse-text"></div>
+                        <div class="game-card__info ">
+                            <span class="game-card__number">Игра №3</span>
+                            <span class="game-card__title">Переверни текст</span>
+                        </div>
+                    </a>
+                    <a href="#rps" class="game-card about__game-card">
+                        <div class="game-card__cover game-card__cover_type_rps"></div>
+                        <div class="game-card__info ">
+                            <span class="game-card__number">Игра №4</span>
+                            <span class="game-card__title">Камень, ножницы, бумага</span>
+                        </div>
+                    </a>
+                    <a href="#quiz" class="game-card about__game-card">
+                        <div class="game-card__cover game-card__cover_type_quiz"></div>
+                        <div class="game-card__info">
+                            <span class="game-card__number">Игра №5</span>
+                            <span class="game-card__title">Простая викторина</span>
+                        </div>
+                    </a>
+                    <a href="#color-gen" class="game-card about__game-card">
+                        <div class="game-card__cover game-card__cover_type_color-gen"></div>
+                        <div class="game-card__info ">
+                            <span class="game-card__number">Игра №6</span>
+                            <span class="game-card__title">Генератор случайных цветов</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
         <section class="game-list" id="games">

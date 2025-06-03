@@ -16,6 +16,7 @@ body {
   font-family: "Montserrat", Arial, sans-serif;
   background: rgb(32, 32, 39);
   color: #fff;
+  word-break: normal
 
 }
 
@@ -24,6 +25,13 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  
+}
+
 
 // Components
 @import '_header';
@@ -60,5 +68,23 @@ body {
     @include respond-to(mobile) {
       font-size: 1em;
     }
+  }
+}
+@include respond-to(desktop) {
+    .quiz-fact-image {
+        display: none;
+    }
+}
+
+.rps-stats-container {
+  @include respond-to(mobile) {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include respond-to(desktop) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
