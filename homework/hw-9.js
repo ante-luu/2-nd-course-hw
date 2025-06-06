@@ -1,4 +1,3 @@
-
 // Задание 1 //
 // Получаем ссылки на элементы с помощью querySelector
 const heading = document.querySelector('#mainHeading');
@@ -16,6 +15,17 @@ button.addEventListener('click', function() {
         heading.style.display = 'none';
         button.textContent = 'Показать';
     }
+});
+
+// Задание 2 //
+// Получаем ссылки на элементы с помощью querySelector
+const colorText = document.querySelector('#colorText');
+const colorButton = document.querySelector('#colorButton');
+
+// Добавляем обработчик события click на кнопку
+colorButton.addEventListener('click', function() {
+    // Изменяем цвет текста на синий
+    colorText.style.color = 'blue';
 });
 
 
