@@ -39,4 +39,17 @@ changeButton.addEventListener('click', function() {
     changeText.textContent = 'Привет, мир!';
 });
 
+// Задание 4 Поиск и изменение элементов по классу //
+// Получаем ссылки на элементы с помощью querySelectorAll
+const descriptions = document.querySelectorAll('.description');
+const changeAllButton = document.querySelector('#changeAllButton');
+
+// Добавляем обработчик события click на кнопку
+changeAllButton.addEventListener('click', function() {
+    // Перебираем все найденные элементы и меняем их текст
+    descriptions.forEach(function(element) {
+        element.textContent = 'Измененный текст';
+    });
+});
+
 
