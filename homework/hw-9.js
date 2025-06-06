@@ -52,4 +52,17 @@ changeAllButton.addEventListener('click', function() {
     });
 });
 
+// Задание 5 Работа с querySelectorAll //
+// Получаем ссылки на элементы с помощью querySelectorAll
+const descriptionParagraphs = document.querySelectorAll('p.description');
+const changeParagraphsButton = document.querySelector('#changeParagraphsButton');
+
+// Добавляем обработчик события click на кнопку
+changeParagraphsButton.addEventListener('click', function() {
+    // Перебираем все найденные абзацы и меняем их текст
+    descriptionParagraphs.forEach(function(paragraph) {
+        paragraph.textContent = 'Новый текст';
+    });
+});
+
 
