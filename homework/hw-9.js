@@ -1,4 +1,4 @@
-// Задание 1 //
+// Задание 1  Скрытие и показ текста//
 // Получаем ссылки на элементы с помощью querySelector
 const heading = document.querySelector('#mainHeading');
 const button = document.querySelector('#toggleButton');
@@ -17,7 +17,7 @@ button.addEventListener('click', function() {
     }
 });
 
-// Задание 2 //
+// Задание 2  Изменение стиля элемента//
 // Получаем ссылки на элементы с помощью querySelector
 const colorText = document.querySelector('#colorText');
 const colorButton = document.querySelector('#colorButton');
@@ -26,6 +26,17 @@ const colorButton = document.querySelector('#colorButton');
 colorButton.addEventListener('click', function() {
     // Изменяем цвет текста на синий
     colorText.style.color = 'blue';
+});
+
+// Задание 3 Динамическое изменение текста //
+// Получаем ссылки на элементы с помощью querySelector
+const changeText = document.querySelector('#changeText');
+const changeButton = document.querySelector('#changeButton');
+
+// Добавляем обработчик события click на кнопку
+changeButton.addEventListener('click', function() {
+    // Изменяем текст заголовка на "Привет, мир!"
+    changeText.textContent = 'Привет, мир!';
 });
 
 
