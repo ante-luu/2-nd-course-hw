@@ -79,4 +79,18 @@ addElementButton.addEventListener('click', function() {
     document.body.appendChild(newParagraph);
 });
 
+// Задание 7 Удаление элемента //
+// Получаем ссылку на кнопку
+const removeElementButton = document.querySelector('#removeElementButton');
+
+// Добавляем обработчик события click на кнопку
+removeElementButton.addEventListener('click', function() {
+    // Находим первый элемент с классом description
+    const firstDescription = document.querySelector('.description');
+    // Если элемент найден, удаляем его
+    if (firstDescription) {
+        firstDescription.remove();
+    }
+});
+
 
