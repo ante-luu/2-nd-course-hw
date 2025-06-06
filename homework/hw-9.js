@@ -65,4 +65,18 @@ changeParagraphsButton.addEventListener('click', function() {
     });
 });
 
+// Задание 6 Добавление нового элемента в DOM //
+// Получаем ссылку на кнопку
+const addElementButton = document.querySelector('#addElementButton');
+
+// Добавляем обработчик события click на кнопку
+addElementButton.addEventListener('click', function() {
+    // Создаем новый элемент p
+    const newParagraph = document.createElement('p');
+    // Устанавливаем текст для нового элемента
+    newParagraph.textContent = 'Новый абзац';
+    // Добавляем новый элемент в конец документа
+    document.body.appendChild(newParagraph);
+});
+
 
